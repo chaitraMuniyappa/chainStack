@@ -43,5 +43,7 @@ function draw(){
     for(var i=0;i<circles.length;i++){
         circles[i].display();
     }
-
+    if(keyDown(RIGHT_ARROW)){
+        Matter.Body.applyForce(circles[circles.length/2-1].body, {x:0, y:0},{x:0.05, y:0});
+    }
 }
